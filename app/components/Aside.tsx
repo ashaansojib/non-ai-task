@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 const Aside = () => {
+
   return (
     <>
       <Link className="list-items" href="/">

@@ -43,7 +43,7 @@ a:hover{
   text-decoration: underline;
 }
 .my-container {
-  width: 1050px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
 }
@@ -80,6 +80,9 @@ a:hover{
   padding: 10px 0px;
   justify-content: space-between;
 }
+.email-container{
+  /* position: relative; */
+}
 .email-box{
   display: flex;
   gap: 10px;
@@ -89,4 +92,33 @@ a:hover{
 }
 .email-box:hover{
   background-color: #f4fdff;
+}
+.modal-box{
+  display: none;
+}
+.modal-box-toggle{
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+.full-bg{
+  background-color: rgba(110, 110, 110, 0.205);
+  height: 100%;
+  width: 100%;
+}
+.details-box{
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  background-color: white;
+  height: 100%;
+  width: 40%;
+}
+.close-btn{
+  cursor: pointer;
+  padding: 10px 0;
 }
