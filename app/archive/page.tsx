@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import EmailCard from "../components/EmailCard";
 import { Emails } from "@/global-interfaces";
+import { FaBookBookmark, FaBoxArchive } from "react-icons/fa6";
 
 const ArchivePage: React.FC = () => {
   const [emails, setEmails] = useState<Emails[]>([]);
@@ -13,20 +14,18 @@ const ArchivePage: React.FC = () => {
       .then((res) => res.json())
       .then((data) => setEmails(data));
   }, []);
-  const handleSelect = (id: any) => {
+  const handleSelect = (id: number) => {
     setSelectEmail(selectEmail + id);
   };
 
   return (
     <div>
-      <h3 className="title">Archive</h3>
+      <h3 className="head-title">Archive</h3>
       <div className="content-header">
         <p>Email Selected ({selectEmail})</p>
-        <div>
-          <Link className="read-btn" href="/">
-            Mark as read (r)
-          </Link>
-          <Link href="/">Archive (a)</Link>
+        <div className="options">
+          <p><FaBookBookmark /> Mark as read (r)</p>
+          <p><FaBoxArchive /> Archive (a)</p>
         </div>
       </div>
       {/* Render email list */}

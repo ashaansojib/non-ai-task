@@ -3,47 +3,23 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 * {
   padding: 0;
   margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
 a{
-  color: #444444;
+  color: #2e2e2e;
   text-decoration: none;
 }
 a:hover{
-  color: #43e76c;
+  color: #a6aca7;
   text-decoration: underline;
 }
 .my-container {
   width: 100%;
+  height: 100vh;
   margin: 0 auto;
   display: flex;
   position: relative;
@@ -52,7 +28,9 @@ a:hover{
 .logo{
   padding: 10px 0;
 }
-
+.head-title{
+  padding-left: 10px;
+}
 /* home page css */
 .main-content{
   width: 100%;
@@ -68,13 +46,25 @@ a:hover{
   left: 0;
   overflow-y: auto;
 }
-
-.sidebar-container{
-  height: 100%;
+.btn{
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  gap: 5px;
 }
+.icons{
+  display: flex;
+  gap: 5px;
+}
+.options{
+  display: flex;
+  gap: 16px;
+}
+.sidebar-container {
+  height: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+}
+
 .active {
   display: flex;
   justify-content: space-between;
@@ -99,9 +89,6 @@ a:hover{
   width: 100%;
   padding: 10px;
 }
-.read-btn{
-  padding-right: 20px;
-}
 /* archive section css */
 .content-header{
   display: flex;
@@ -116,7 +103,7 @@ a:hover{
   border-top: 1px solid rgb(228, 228, 228);
 }
 .email-box:hover{
-  background-color: #f4fdff;
+ background-color: #D1E2FF;
 }
 .modal-box{
   display: none;

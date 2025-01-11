@@ -3,6 +3,7 @@ import { Emails } from "@/global-interfaces";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import EmailCard from "./components/EmailCard";
+import { FaBookBookmark, FaBoxArchive } from "react-icons/fa6";
 
 export default function Home() {
   const [emails, setEmails] = useState<Emails[]>([]);
@@ -19,14 +20,16 @@ export default function Home() {
   };
   return (
     <div>
-      <h3 className="title">Inbox</h3>
+      <h3 className="head-title">Inbox</h3>
       <div className="content-header">
         <p>Email Selected ({selectEmail})</p>
-        <div>
-          <Link className="read-btn" href="/">
-            Mark as read (r)
-          </Link>
-          <Link href="/">Archive (a)</Link>
+        <div className="options">
+          <p>
+            <FaBookBookmark /> Mark as read (r)
+          </p>
+          <p>
+            <FaBoxArchive /> Archive (a)
+          </p>
         </div>
       </div>
       {/* email list here*/}
