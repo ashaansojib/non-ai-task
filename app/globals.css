@@ -30,13 +30,18 @@ body {
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+.my-container{
+  width: 1080px;
+  margin: 0 auto;
+}
+/* home page css */
+.home-container{
+  display: flex;
+  justify-items: center;
+  gap: 10px;
 }
