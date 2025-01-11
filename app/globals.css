@@ -75,7 +75,7 @@ a:hover{
   flex-direction: column;
   justify-content: space-between;
 }
-.list-items {
+.active {
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
@@ -84,6 +84,15 @@ a:hover{
   border-radius: 20px;
   text-align: center;
   background-color: #d6e2fb;
+}
+.default {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  text-align: center;
 }
 /* inbox css */
 .title{

@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import EmailCard from "./components/EmailCard";
 
 export default function Home() {
-  const [emails, setEmails] = useState([]);
+  const [emails, setEmails] = useState<Emails[]>([]);
   const [selectEmail, setSelectEmail] = useState(0);
 
   useEffect(() => {
@@ -14,9 +14,9 @@ export default function Home() {
       .then((data) => setEmails(data));
   }, []);
 
-  const handleSelect = (id:any) =>{
-    setSelectEmail(selectEmail + id)
-  }
+  const handleSelect = (id: number) => {
+    setSelectEmail(selectEmail + id);
+  };
   return (
     <div>
       <h3 className="title">Inbox</h3>
@@ -31,7 +31,7 @@ export default function Home() {
       </div>
       {/* email list here*/}
       {emails?.map((item: Emails) => (
-        <EmailCard key={item.id} item={item} handleSelect={handleSelect}/>
+        <EmailCard key={item.id} item={item} handleSelect={handleSelect} />
       ))}
     </div>
   );
