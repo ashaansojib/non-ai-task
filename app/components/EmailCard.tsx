@@ -1,8 +1,12 @@
 import { Emails } from "@/global-interfaces";
 import React, { useState } from "react";
 
+interface EmailCardProps {
+  item: Emails;
+  handleSelect: (count: number) => void;
+}
 
-const EmailCard: React.FC = ({ item, handleSelect }) => {
+const EmailCard: React.FC<EmailCardProps> = ({ item, handleSelect }) => {
   const [showModal, setShowModal] = useState(true);
   const { id, title, description, label } = item;
 

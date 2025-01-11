@@ -6,7 +6,7 @@ import EmailCard from "./components/EmailCard";
 
 export default function Home() {
   const [emails, setEmails] = useState<Emails[]>([]);
-  const [selectEmail, setSelectEmail] = useState(0);
+  const [selectEmail, setSelectEmail] = useState<number>(0);
 
   useEffect(() => {
     fetch("/inbox.json")

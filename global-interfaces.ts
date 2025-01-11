@@ -1,5 +1,5 @@
 export interface Emails {
-  id: String;
+  id: number | string;
   title: String;
   description: String;
   author: String;
