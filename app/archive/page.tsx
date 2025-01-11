@@ -5,17 +5,23 @@ import EmailCard from "../components/EmailCard";
 import { Emails } from "@/global-interfaces";
 
 const ArchivePage: React.FC = () => {
-  const [archive, setArchive] = useState([]);
+  const [emails, setEmails] = useState([]);
+  const [selectEmail, setSelectEmail] = useState(0);
+
   useEffect(() => {
     fetch("/fake.json")
       .then((res) => res.json())
-      .then((data) => setArchive(data));
+      .then((data) => setEmails(data));
   }, []);
+  const handleSelect = (id: any) => {
+    setSelectEmail(selectEmail + id);
+  };
+
   return (
     <div>
       <h3 className="title">Archive</h3>
       <div className="content-header">
-        <p>Email Selected (12)</p>
+      <p>Email Selected ({selectEmail})</p>
         <div>
           <Link className="read-btn" href="/">
             Mark as read (r)
@@ -24,9 +30,9 @@ const ArchivePage: React.FC = () => {
         </div>
       </div>
       {/* email list here*/}
-      {
-        archive?.map( (item: Emails) => <EmailCard key={item.id} item={item} />)
-      }
+      {emails?.map((item: Emails) => (
+        <EmailCard key={item.id} item={item} handleSelect={handleSelect}/>
+      ))}
     </div>
   );
 };

@@ -1,143 +1,37 @@
 [
-    {
-      "id": "1",
-      "title": "Introduction to JSON",
-      "description": "A beginner's guide to understanding JSON format.",
-      "author": "John Doe",
-      "label": "archive"
-    },
-    {
-      "id": "2",
-      "title": "Advanced JavaScript",
-      "description": "In-depth concepts of JavaScript programming.",
-      "author": "Jane Smith",
-      "label": "inbox"
-    },
-    {
-      "id": "3",
-      "title": "Web Development Tips",
-      "description": "Top tips to improve your web development skills.",
-      "author": "Sam Wilson",
-      "label": "archive"
-    },
-    {
-      "id": "4",
-      "title": "Learning React",
-      "description": "A comprehensive tutorial on building apps with React.",
-      "author": "Alex Johnson",
-      "label": "inbox"
-    },
-    {
-      "id": "5",
-      "title": "Mastering Redux",
-      "description": "Step-by-step guide to managing state with Redux.",
-      "author": "Chris Evans",
-      "label": "archive"
-    },
-    {
-      "id": "6",
-      "title": "Understanding Node.js",
-      "description": "Learn the basics of Node.js for backend development.",
-      "author": "Sarah Brown",
-      "label": "inbox"
-    },
-    {
-      "id": "7",
-      "title": "CSS Best Practices",
-      "description": "Enhance your styling skills with these CSS tips.",
-      "author": "Mark Lee",
-      "label": "archive"
-    },
-    {
-      "id": "8",
-      "title": "Building REST APIs",
-      "description": "Learn how to create RESTful APIs from scratch.",
-      "author": "Rachel Green",
-      "label": "inbox"
-    },
-    {
-      "id": "9",
-      "title": "Git and GitHub Basics",
-      "description": "An essential guide to version control with Git.",
-      "author": "Kevin White",
-      "label": "archive"
-    },
-    {
-      "id": "10",
-      "title": "Next.js for Beginners",
-      "description": "Learn to build server-side rendered React applications.",
-      "author": "Emma Watson",
-      "label": "inbox"
-    },
-    {
-      "id": "11",
-      "title": "SEO Optimization",
-      "description": "Improve your website's visibility with SEO.",
-      "author": "Oliver King",
-      "label": "archive"
-    },
-    {
-      "id": "12",
-      "title": "Introduction to TypeScript",
-      "description": "A beginner's guide to TypeScript for JavaScript developers.",
-      "author": "Sophia Brown",
-      "label": "inbox"
-    },
-    {
-      "id": "13",
-      "title": "Responsive Design Principles",
-      "description": "Learn the foundations of responsive web design.",
-      "author": "Jack Davis",
-      "label": "archive"
-    },
-    {
-      "id": "14",
-      "title": "Debugging JavaScript",
-      "description": "Master the art of debugging in JavaScript.",
-      "author": "Mia Taylor",
-      "label": "inbox"
-    },
-    {
-      "id": "15",
-      "title": "Python for Web Development",
-      "description": "An introduction to using Python for web projects.",
-      "author": "Henry Wilson",
-      "label": "archive"
-    },
-    {
-      "id": "16",
-      "title": "MongoDB Essentials",
-      "description": "Learn the basics of working with MongoDB databases.",
-      "author": "Isabella Martinez",
-      "label": "inbox"
-    },
-    {
-      "id": "17",
-      "title": "Vue.js for Beginners",
-      "description": "A quickstart guide to building applications with Vue.js.",
-      "author": "Liam Anderson",
-      "label": "archive"
-    },
-    {
-      "id": "18",
-      "title": "DevOps Practices",
-      "description": "Understand the principles and practices of DevOps.",
-      "author": "Charlotte Moore",
-      "label": "inbox"
-    },
-    {
-      "id": "19",
-      "title": "Web Performance Optimization",
-      "description": "Tips to make your web applications faster.",
-      "author": "James Carter",
-      "label": "archive"
-    },
-    {
-      "id": "20",
-      "title": "GraphQL Basics",
-      "description": "An introductory guide to building APIs with GraphQL.",
-      "author": "Amelia White",
-      "label": "inbox"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "title": "Introduction to JSON",
+    "description": "A beginner's guide to understanding JSON format.",
+    "author": "John Doe",
+    "label": "archive"
+  },
+  {
+    "id": 3,
+    "title": "Web Development Tips",
+    "description": "Top tips to improve your web development skills.",
+    "author": "Sam Wilson",
+    "label": "archive"
+  },
+  {
+    "id": 5,
+    "title": "Mastering Redux",
+    "description": "Step-by-step guide to managing state with Redux.",
+    "author": "Chris Evans",
+    "label": "archive"
+  },
+  {
+    "id": 7,
+    "title": "CSS Best Practices",
+    "description": "Enhance your styling skills with these CSS tips.",
+    "author": "Mark Lee",
+    "label": "archive"
+  },
+  {
+    "id": 9,
+    "title": "Git and GitHub Basics",
+    "description": "An essential guide to version control with Git.",
+    "author": "Kevin White",
+    "label": "archive"
+  }
+]

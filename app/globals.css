@@ -46,22 +46,40 @@ a:hover{
   width: 100%;
   margin: 0 auto;
   display: flex;
+  position: relative;
+  
 }
+.logo{
+  padding: 10px 0;
+}
+
 /* home page css */
 .main-content{
   width: 100%;
-  padding: 10px;
+  padding: 10px 0px;
 }
 /* sidebar css */
 .sidebar {
   padding: 10px;
   width: 300px;
-  background: #f5f5f5;
+  background: #F8FAFC;
+  position: sticky;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+.sidebar-container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .list-items {
   display: flex;
   justify-content: space-between;
-  padding: 5px 10px;
+  padding: 10px 20px;
+  font-size: 18px;
   margin-bottom: 5px;
   border-radius: 20px;
   text-align: center;
@@ -69,7 +87,8 @@ a:hover{
 }
 /* inbox css */
 .title{
-  color: skyblue;
+  width: 100%;
+  padding: 10px;
 }
 .read-btn{
   padding-right: 20px;
@@ -77,11 +96,8 @@ a:hover{
 /* archive section css */
 .content-header{
   display: flex;
-  padding: 10px 0px;
+  padding: 10px;
   justify-content: space-between;
-}
-.email-container{
-  /* position: relative; */
 }
 .email-box{
   display: flex;

@@ -3,19 +3,18 @@ import React, { useState } from "react";
 interface SingleEmail {
   item: Emails;
 }
-const EmailCard: React.FC<SingleEmail> = ({ item }) => {
+const EmailCard: React.FC<SingleEmail> = ({ item, handleSelect }) => {
   const [showModal, setShowModal] = useState(true);
   const { id, title, description, label } = item;
 
   const handleTogge = () => {
     setShowModal(!showModal);
   };
-  console.log(showModal);
   return (
-    <div className="email-container">
-      <div onClick={handleTogge} className="email-box">
-        <input type="checkbox" />
-        <p>{title}</p>
+    <>
+      <div className="email-box">
+        <input onClick={()=>handleSelect(1)} type="checkbox" />
+        <p onClick={handleTogge} className="title">{title}</p>
       </div>
       <div className={`${showModal ? "modal-box" : "modal-box-toggle"}`}>
         <div onClick={handleTogge} className="full-bg"></div>
@@ -28,7 +27,7 @@ const EmailCard: React.FC<SingleEmail> = ({ item }) => {
           <span>{label}</span>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
