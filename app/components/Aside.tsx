@@ -1,13 +1,17 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from "next/link";
+import React from "react";
 
 const Aside = () => {
-    return (
-        <div>
-            <Link href="/">Inbox</Link>
-            <Link href="/archive">Archive</Link>
-        </div>
-    );
+  return (
+    <>
+      <Link className="list-items" href="/">
+        Inbox <span>10</span>
+      </Link>
+      <Link className="list-items" href="/archive">
+        Archive <span>9</span>
+      </Link>
+    </>
+  );
 };
 
 export default Aside;

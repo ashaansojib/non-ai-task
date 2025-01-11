@@ -1,10 +1,18 @@
-import Aside from "./components/Aside";
+import Link from "next/link";
+import React from "react";
 
 export default function Home() {
   return (
-    <div className="my-container">
-      <div className="home-container">
-        <h2>Show all the inbox item</h2>
+    <div>
+      <h3 className="title">Inbox</h3>
+      <div className="content-header">
+        <p>Email Selected (12)</p>
+        <div>
+          <Link className="read-btn" href="/">
+            Mark as read (r)
+          </Link>
+          <Link href="/">Archive (a)</Link>
+        </div>
       </div>
     </div>
   );

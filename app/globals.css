@@ -25,7 +25,6 @@ body {
 }
 
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -35,13 +34,59 @@ body {
     color-scheme: dark;
   }
 }
-.my-container{
-  width: 1080px;
+a{
+  color: #444444;
+  text-decoration: none;
+}
+a:hover{
+  color: #43e76c;
+  text-decoration: underline;
+}
+.my-container {
+  width: 1050px;
   margin: 0 auto;
+  display: flex;
 }
 /* home page css */
-.home-container{
+.main-content{
+  width: 100%;
+  padding: 10px;
+}
+/* sidebar css */
+.sidebar {
+  padding: 10px;
+  width: 300px;
+  background: #f5f5f5;
+}
+.list-items {
   display: flex;
-  justify-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #d6e2fb;
+}
+/* inbox css */
+.title{
+  color: skyblue;
+}
+.read-btn{
+  padding-right: 20px;
+}
+/* archive section css */
+.content-header{
+  display: flex;
+  padding: 10px 0px;
+  justify-content: space-between;
+}
+.email-box{
+  display: flex;
   gap: 10px;
+  cursor: pointer;
+  padding: 10px;
+  border-top: 1px solid rgb(228, 228, 228);
+}
+.email-box:hover{
+  background-color: #f4fdff;
 }
