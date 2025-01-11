@@ -1,6 +1,5 @@
 "use client";
 import { Emails } from "@/global-interfaces";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import EmailCard from "./components/EmailCard";
 import { FaBookBookmark, FaBoxArchive } from "react-icons/fa6";
