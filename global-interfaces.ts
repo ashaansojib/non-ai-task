@@ -1,7 +1,7 @@
 export interface Emails {
-  id: number | string;
-  title: String;
-  description: String;
-  author: String;
-  label: String;
+  id: string;
+  title: string;
+  description: string;
+  author: string;
+  label: string;
 }

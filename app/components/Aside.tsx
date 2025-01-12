@@ -3,10 +3,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import { FaBoxArchive, FaInbox, FaRightFromBracket } from "react-icons/fa6";
+import { useAllEmailsQuery } from "../redux/features/EmailsApi";
 
 const Aside = () => {
+  const {data: email = [], isLoading} = useAllEmailsQuery()
   const router = usePathname();
-  console.log(router);
+  const filterInbox = email?.filter( item => item.label === 'inbox');
+  const filterArchive = email?.filter( item => item.label === 'archive');
   return (
     <div className="sidebar-container">
       <div>
@@ -16,7 +19,7 @@ const Aside = () => {
             <FaInbox />
             Inbox
           </span>{" "}
-          <span>9</span>
+          <span>{filterInbox.length}</span>
         </Link>
         <Link
           className={`${router === "/archive" ? "active" : "default"}`}
@@ -26,7 +29,7 @@ const Aside = () => {
             <FaBoxArchive />
             Archive
           </span>{" "}
-          <span>5</span>
+          <span>{filterArchive.length}</span>
         </Link>
       </div>
       <p className="btn">

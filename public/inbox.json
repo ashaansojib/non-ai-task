@@ -25,7 +25,7 @@
       "title": "Building REST APIs",
       "description": "Learn how to create RESTful APIs from scratch.",
       "author": "Rachel Green",
-      "label": "inbox"
+      "label": "archive"
     },
     {
       "id": "10",
@@ -39,7 +39,7 @@
       "title": "Introduction to TypeScript",
       "description": "A beginner's guide to TypeScript for JavaScript developers.",
       "author": "Sophia Brown",
-      "label": "inbox"
+      "label": "archive"
     },
     {
       "id": "14",
@@ -53,7 +53,7 @@
       "title": "MongoDB Essentials",
       "description": "Learn the basics of working with MongoDB databases.",
       "author": "Isabella Martinez",
-      "label": "inbox"
+      "label": "archive"
     },
     {
       "id": "18",

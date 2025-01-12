@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 interface EmailCardProps {
   item: Emails;
-  handleSelect: (count: number) => void;
+  handleSelect: (data: any) => void;
 }
 
 const EmailCard: React.FC<EmailCardProps> = ({ item, handleSelect }) => {
@@ -16,15 +16,21 @@ const EmailCard: React.FC<EmailCardProps> = ({ item, handleSelect }) => {
   return (
     <>
       <div className="email-box">
-        <input onClick={()=>handleSelect(1)} type="checkbox" />
-        <p onClick={handleTogge} className="title">{title}</p>
+        <input
+          onClick={(e) => handleSelect((e.target as HTMLInputElement).checked)}
+          type="checkbox"
+        />
+
+        <p onClick={handleTogge} className="title">
+          {title}
+        </p>
       </div>
       <div className={`${showModal ? "modal-box" : "modal-box-toggle"}`}>
         <div onClick={handleTogge} className="full-bg"></div>
         <div className="details-box">
-        <div onClick={handleTogge} className="close-btn">
+          <div onClick={handleTogge} className="close-btn">
             <p>Close (Esc)</p>
-        </div>
+          </div>
           <h2>{title}</h2>
           <p>{description}</p>
           <span>{label}</span>

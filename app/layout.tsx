@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import Aside from "./components/Aside";
+import StoreProvider from "./redux/StoreProvider";
 
 const geistSans = Roboto_Slab({
   variable: "--font-geist-sans",
@@ -21,12 +22,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable}`}>
-        <div className="my-container">
-          <div className="sidebar">
-            <Aside />
+        <StoreProvider>
+          <div className="my-container">
+            <div className="sidebar">
+              <Aside />
+            </div>
+            <div className="main-content">{children}</div>
           </div>
-          <div className="main-content">{children}</div>
-        </div>
+        </StoreProvider>
       </body>
     </html>
   );
