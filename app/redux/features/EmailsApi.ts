@@ -6,7 +6,7 @@ export const emailApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "/" }),
   endpoints: (builder) => ({
     AllEmails: builder.query<Emails[], void>({
-      query: () => "inbox.json",
+      query: () => "/inbox.json",
     }),
     // makeArchive: builder.mutation({
     //   query: (id) => ({
