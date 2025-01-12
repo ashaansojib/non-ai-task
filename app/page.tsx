@@ -7,7 +7,7 @@ import { useAllEmailsQuery } from "./redux/features/EmailsApi";
 
 export default function Home() {
   const { data: email = [], isLoading } = useAllEmailsQuery();
-  const filterArchive = email?.filter((item) => item.label === "inbox");
+  const filterInbox = email?.filter((item) => item.label === "inbox");
   const [selectEmail, setSelectEmail] = useState(0);
 
   const handleSelect = (data: any) => {
@@ -15,7 +15,7 @@ export default function Home() {
   };
   return (
     <div>
-      <h3 className="head-title">Archive</h3>
+      <h3 className="head-title">Inbox</h3>
       <div className="content-header">
         <p>Email Selected ({selectEmail})</p>
         <div className="options">
@@ -30,7 +30,7 @@ export default function Home() {
       {isLoading ? (
         <p>Loading</p>
       ) : (
-        filterArchive.map((item: Emails) => (
+        filterInbox.map((item: Emails) => (
           <EmailCard key={item.id} item={item} handleSelect={handleSelect} />
         ))
       )}

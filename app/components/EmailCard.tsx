@@ -1,5 +1,5 @@
 import { Emails } from "@/global-interfaces";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 interface EmailCardProps {
   item: Emails;
@@ -13,6 +13,21 @@ const EmailCard: React.FC<EmailCardProps> = ({ item, handleSelect }) => {
   const handleTogge = () => {
     setShowModal(!showModal);
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setShowModal((prevEsc) => !prevEsc);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
     <>
       <div className="email-box">

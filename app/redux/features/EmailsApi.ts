@@ -8,6 +8,12 @@ export const emailApi = createApi({
     AllEmails: builder.query<Emails[], void>({
       query: () => "inbox.json",
     }),
+    // makeArchive: builder.mutation({
+    //   query: (id) => ({
+    //     method: 'PATCH',
+    //     body: 
+    //   })
+    // })
   }),
 });
 
